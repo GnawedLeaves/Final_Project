@@ -4,36 +4,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Pizza House</title>
   <style>
-    .navbar {
-      width: 100%;
-      background: red;
-      position: fixed;
-      display: flex;
-      padding: 2rem 1rem;
-    }
-
-    .navbarItem {
-      margin: 0 1rem;
-    }
-
-    .container {
-      height: 200vh;
-      width: 100%;
-    }
   </style>
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="navbarItem">Menu</div>
-    <div class="navbarItem">Offers</div>
-    <div class="navbarItem">Menu</div>
-    <div class="navbarItem">Menu</div>
-    <div class="navbarItem">Menu</div>
+  <dialog id="sign-up-dialog">
+    This is a dialog box
+    <button onclick="closeDialog('sign-up-dialog')" id="close-dialog-btn">Close</button>
+  </dialog>
+  <nav id="navbar" class="navbar">
+    <div class="navbarItems">
+      <a href="#" class="navbarItem">Menu</a>
+      <a href="#" class="navbarItem">Offers</a>
+      <a href="#" class="navbarItem">Your Orders</a>
+      <a href="#" class="navbarItem">Stores</a>
+      <a href="#" class="navbarItem">Support</a>
+    </div>
+
+    <a href="index.html" class="navbarName">Pizza House</a>
+    <div class="cart-profile-container">
+      <i class=" nav-icon fa-solid fa-cart-shopping fa-xl"></i>
+      <button class="button">Join Us</button>
+
+    </div>
   </nav>
-  <!-- <div class="container"></div> -->
+  <div id="container" class="container">
+    <div class="hero-container">
+      <img class="hero-picture">
+      <button id="hero-button" class="button">Buy Now!</button>
+    </div>
+  </div>
+
+
+  <script>
+    // Displaces the container element based on the height of the navbar
+    let navMargin = document.getElementById("navbar").offsetHeight;
+    const container = document.getElementById("container").style.marginTop = navMargin + "px"
+
+
+    const signUpDialog = document.getElementById("sign-up-dialog");
+    //signUpDialog.showModal();
+
+    const closeDialog = (id) => {
+      const dialog = document.getElementById(id)
+      dialog.close();
+    }
+
+
+
+  </script>
+  <script src="https://kit.fontawesome.com/0ef6f85575.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,125 @@
+:root {
+  --primary: #1e90ff;
+  --secondary: salmon;
+  --background: #ffffff;
+  --text: #333333;
+  --image: gray;
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  margin: 0;
+  border: 1px solid black;
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background: var(--background);
+  z-index: 2;
+}
+
+.navbarItems {
+  display: flex;
+  position: absolute;
+  left: 1rem;
+
+}
+
+.navbarItem {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+
+.cart-profile-container {
+  display: flex;
+  position: absolute;
+  right: 5rem;
+}
+
+.navbarName {
+  font-size: 2.2rem;
+  color: #333333;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  color: var(--text);
+}
+
+.container {
+  height: 200vh;
+  background: rgb(202, 252, 202);
+}
+
+.nav-icon {
+  width: 2rem;
+  cursor: pointer;
+  color: gray;
+  transition: 0.3s;
+}
+
+.nav-icon:hover {
+  color: var(--primary);
+}
+
+.cart-profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  border-radius: 20px;
+  border: 1px solid var(--text);
+  padding: 0.7rem 1.5rem;
+  background: white;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: 0.3s;
+
+
+
+}
+
+.button:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--background);
+}
+
+.hero-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-height: 30rem;
+}
+
+.hero-picture {
+  height: 50rem;
+  width: 100%;
+  background: var(--image);
+}
+
+#hero-button {
+  position: absolute;
+  bottom: 5rem;
+  right: 10rem;
+  font-size: 1.8rem;
+  padding: 0.7rem 2.5rem;
+  border-radius: 5rem;
+}
